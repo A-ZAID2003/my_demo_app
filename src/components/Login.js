@@ -10,8 +10,7 @@ const Login = () => {
 
     if (!username || !password) {
       alert("Username and Password is required");
-      return; // exits the function if the inputs are empty
-      
+      return; // Exits the function if the inputs are empty
     }
 
     try {
@@ -56,7 +55,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-
+        
         <button type="submit" className="btn btn-primary btn-block">
           Login
         </button>

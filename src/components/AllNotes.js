@@ -26,14 +26,14 @@ const AllNotes = () => {
     if (error) return <p>Error: {error} </p>
 
     const onDelete = async (_id) => {
-    console.log("Deleting note with id:", _id);  // Log the ID for debugging
+    console.log("Deleting note with id:", _id);  // Log the ID for debugged
     try {
         await axios.delete(`http://localhost:5000/notes/${_id}`);
         setNotes(notes.filter(note => note._id !== _id));  // Filter out the deleted note
     } catch (err) {
         console.error("Failed to delete note:", err.message);
     }
-};
+}
 
   return (
     <div className="container mt-5">
